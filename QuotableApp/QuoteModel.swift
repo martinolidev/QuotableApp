@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct QuoteContent: Codable {
     let content: String
@@ -15,24 +16,7 @@ struct QuoteContent: Codable {
 class QuoteModel {
     
     func fetchQuote() {
-        guard let url = URL(string: "https://api.quotable.io/random") else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) {
-            (data, error, response) in
-            
-            if let error = error {
-                print(error)
-            } else if let data = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let quote = try decoder.decode(QuoteContent.self, from: data)
-                    print(quote.content)
-                } catch {
-                    print("Error to decode data")
-                }
-            }
-        }
-        task.resume()
+        //AF.request("https://api.quotable.io/random")
     }
     
 }
