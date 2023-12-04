@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Quote: Codable {
+    let content: String
+    let author: String
+}

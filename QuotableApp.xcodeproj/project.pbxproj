@@ -14,6 +14,7 @@
 		886BC3BC2B1E724800E95FBB /* QuotableAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886BC3BB2B1E724800E95FBB /* QuotableAppTests.swift */; };
 		886BC3C62B1E724800E95FBB /* QuotableAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886BC3C52B1E724800E95FBB /* QuotableAppUITests.swift */; };
 		886BC3C82B1E724800E95FBB /* QuotableAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886BC3C72B1E724800E95FBB /* QuotableAppUITestsLaunchTests.swift */; };
+		886BC3D52B1E77B200E95FBB /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886BC3D42B1E77B200E95FBB /* QuoteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		886BC3C12B1E724800E95FBB /* QuotableAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuotableAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		886BC3C52B1E724800E95FBB /* QuotableAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotableAppUITests.swift; sourceTree = "<group>"; };
 		886BC3C72B1E724800E95FBB /* QuotableAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotableAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		886BC3D42B1E77B200E95FBB /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				886BC3AA2B1E724600E95FBB /* QuotableAppApp.swift */,
 				886BC3AC2B1E724600E95FBB /* ContentView.swift */,
+				886BC3D42B1E77B200E95FBB /* QuoteModel.swift */,
 				886BC3AE2B1E724800E95FBB /* Assets.xcassets */,
 				886BC3B02B1E724800E95FBB /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886BC3D52B1E77B200E95FBB /* QuoteModel.swift in Sources */,
 				886BC3AD2B1E724600E95FBB /* ContentView.swift in Sources */,
 				886BC3AB2B1E724600E95FBB /* QuotableAppApp.swift in Sources */,
 			);
