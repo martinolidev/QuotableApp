@@ -23,8 +23,9 @@ class QuoteModel {
         AF.request("https://api.quotable.io/random", method: .get).validate(statusCode: 200...299).responseDecodable (of: QuoteContent.self) {
             response in
             
-            if let content = response.value?.content{
-                print(content)
+            if let content = response.value {
+                print(content.content)
+                print(content.author)
             } else {
                 print(response.error?.responseCode ?? "No code error")
             }

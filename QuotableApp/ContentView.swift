@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    let model = QuoteModel()
+    
     var body: some View {
         VStack {
             RoundedRectangle(cornerRadius: 16)
@@ -23,7 +25,7 @@ struct ContentView: View {
                     }
                 )
             Button {
-                //code here
+                model.fetchQuote()
             } label: {
                 RoundedRectangle(cornerRadius: 16)
                     .foregroundColor(.clear)
