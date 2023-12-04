@@ -15,8 +15,13 @@ struct QuoteContent: Codable {
 
 class QuoteModel {
     
-    func fetchQuote() {
-        
+    var quoteResponse: QuoteContent
+    
+    init() {
+         quoteResponse = QuoteContent(content: "I'm just a beginner", author: "By martinoli")
+    }
+    
+    func fetchQuote() -> QuoteContent {
         //We make a request with the type GET, then we check a range of
         //status codes between 200 and 299, means the reponse is OK
         //then we try to decode the json into a QuoteContent struct
@@ -24,13 +29,14 @@ class QuoteModel {
             response in
             
             if let content = response.value {
-                print(content.content)
-                print(content.author)
+                self.quoteResponse = QuoteContent(content: content.content, author: content.author)
             } else {
                 print(response.error?.responseCode ?? "No code error")
             }
             
         }
+        
+        return quoteResponse
     }
     
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let model = QuoteModel()
+    @ObservedObject var viewModel = QuoteViewModel()
     
     var body: some View {
         VStack {
@@ -17,15 +17,22 @@ struct ContentView: View {
                 .foregroundColor(.indigo)
                 .overlay(
                     VStack {
-                        Text("If opportunity doesn't knock, build a door.")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                            .bold()
-                            .padding(.horizontal)
+                        VStack {
+                            Text(viewModel.quoteResponse.content)
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                .bold()
+                                .padding(.horizontal)
+                            Text(viewModel.quoteResponse.author)
+                                .font(.title)
+                                .bold()
+                                .foregroundColor(.white)
+                                .padding(.top)
+                        }
                     }
                 )
             Button {
-                model.fetchQuote()
+                viewModel.makeRequest()
             } label: {
                 RoundedRectangle(cornerRadius: 16)
                     .foregroundColor(.clear)
