@@ -16,7 +16,15 @@ struct QuoteContent: Codable {
 class QuoteModel {
     
     func fetchQuote() {
-        //AF.request("https://api.quotable.io/random")
+        
+        //We make a request with the type GET, then we check a range of
+        //status codes between 200 and 299, means the reponse is OK
+        //then we try to decode the json into a QuoteContent struct
+        AF.request("https://api.quotable.io/random", method: .get).validate(statusCode: 200...299).responseDecodable (of: QuoteContent.self) {
+            reponse in
+            
+            
+        }
     }
     
 }
